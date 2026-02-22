@@ -1,0 +1,8 @@
+[phases.setup]
+nixPkgs = ["...", "libX11", "cmake", "gcc", "stdenv.cc.cc.lib", "libopencv"]
+
+[phases.build]
+cmds = ["pip install -r requirements.txt"]
+
+[start]
+cmd = "gunicorn app:app"
