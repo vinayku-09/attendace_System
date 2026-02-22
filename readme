@@ -1,26 +1,67 @@
-Folder Structure 
+This `README.md` provides an overview, installation guide, and usage instructions for the Attendance Monitoring System.
 
+# Attendance Monitoring System
+
+A face-recognition-based web application built with Flask that automates student attendance by processing class photos.
+
+## Features
+
+* **User Authentication**: Secure Signup and Login system for faculty members.
+* **Automated Attendance**: Processes uploaded class images and matches faces against a pre-encoded student database.
+* **Interactive Dashboard**: Visualizes attendance data using Pie and Bar charts for different classes.
+* **CSV Logging**: Automatically updates an `attendance.csv` file with "Present" (P) or "Absent" (A) status and calculates totals.
+
+## Project Structure
+
+```text
 Parent Folder 
 │
-├── app.py                      # Main Python backend file handling routes and logic
-├── attendance.csv               # File storing attendance data in CSV format
-├── students_images/             # Folder containing images of students for face recognition
-│
-├── static/                      # Folder for static frontend assets (CSS, JavaScript)
-│   ├── css/                     # Contains stylesheets
-│   │   └── styles.css           # CSS for your web pages
-│   └── js/                      # Contains JavaScript files for frontend interactivity
-│       └── script.js            # Any client-side JavaScript logic
-│
-├── templates/                   # Folder containing HTML templates for various web pages
-│   ├── ams_panel/index.html           # Attendance Management System panel page
-│   ├── capture_attendance/index.html  # Page for capturing attendance via camera
-│   ├── dashboard/index.html           # Dashboard page for viewing summary information
-│   ├── login/index.html               # Login page for teachers or admins
-│   ├── signup/index.html              # Signup page for new users
-│
-└── uploads/                     # Folder storing uploaded images
+├── app.py                      # Main Python backend file
+├── attendance.csv               # File storing attendance data
+├── students_images/             # Database of student photos
+├── static/                      # CSS and JavaScript assets
+├── templates/                   # HTML templates for web pages
+└── uploads/                     # Storage for uploaded class photos
 
-**The Attendance Files Must Conatin the Roll And Name Colums Already Filled.
+```
 
-To Run : python app.py
+## Prerequisites
+
+* **Python**: 3.x.
+* **C++ Compiler**: Visual Studio Build Tools (Desktop development with C++) is required to compile the `dlib` dependency on Windows.
+* **Libraries**: `flask`, `face_recognition`, `opencv-python`, `pandas`, `numpy`.
+
+## Installation
+
+1. **Install Build Tools**: Ensure the "Desktop development with C++" workload is installed via the Visual Studio Installer.
+2. **Install Dependencies**:
+```bash
+pip install flask face_recognition opencv-python pandas numpy
+
+```
+
+
+
+## Setup & Usage
+
+### 1. Prepare Data
+
+* **Student Database**: Add individual photos of students to the `students_images/` folder. Name the files exactly as the student's name (e.g., `A.jpg`).
+* **Attendance Sheet**: Ensure `attendance.csv` contains the initial `Roll No` and `Name` columns.
+
+### 2. Run the Application
+
+Start the Flask server from your terminal:
+
+```bash
+python app.py
+
+```
+
+Access the system at `http://127.0.0.1:5000/`.
+
+### 3. Workflow
+
+1. **Signup/Login**: Create a faculty account.
+2. **Capture Attendance**: Navigate to the "Capture Attendance" panel, select the date, and upload a group photo of the class.
+3. **View Results**: The system will redirect to the results or you can check the **Dashboard** for overall statistics.
