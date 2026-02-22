@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form with Light Button</title>
+    <link rel="stylesheet" href="/static/css/login.css">
+</head>
+
+<body>
+    <div class="login-container">
+        <h2>Login Form</h2>
+        <form id="login-form">
+            <div class="input-group">
+                <input type="text" id="email" required>
+                <label for="email">Email</label>
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" required>
+                <label for="password">Password</label>
+            </div>
+            <button type="submit" class="submit-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>Submit
+            </button>
+            <a href="/signup" class="signup-link">Don't have an account? SIGN UP</a>
+        </form>
+    </div>
+    <script src="/static/js/login.js"></script>
+</body>
+
+</html>

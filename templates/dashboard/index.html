@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Dashboard</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap">
+    <link rel="stylesheet" href="/static/css/dashboard.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#">Home</a>
+        <a href="#">Defaulter</a>
+        <a href="/login">Logout</a>
+    </nav>
+    <div class="dashboard-container">
+        <h1>Attendance Dashboard</h1>
+        <div class="charts-container">
+            <div class="chart">
+                <canvas id="pieChartClassA"></canvas>
+                <p>Class A</p>
+            </div>
+            <div class="chart">
+                <canvas id="pieChartClassB"></canvas>
+                <p>Class B</p>
+            </div>
+            <div class="chart">
+                <canvas id="pieChartClassC"></canvas>
+                <p>Class C</p>
+            </div>
+        </div>
+        <div class="graph-container">
+            <div class="bar-chart-container">
+                <canvas id="barChartClassA"></canvas>
+                <p>Class A Monthly Attendance</p>
+            </div>
+            <div class="bar-chart-container">
+                <canvas id="barChartClassB"></canvas>
+                <p>Class B Monthly Attendance</p>
+            </div>
+            <div class="bar-chart-container">
+                <canvas id="barChartClassC"></canvas>
+                <p>Class C Monthly Attendance</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/static/js/dashboard.js"></script>
+</body>
+</html>

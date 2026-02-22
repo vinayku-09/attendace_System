@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capture Attendance</title>
+  <link rel="stylesheet" href="/static/css/capture_attendance.css">
+</head>
+<body>
+  <h1>Capture Attendance</h1>
+  <div class="form-container">
+    <form action="/process_attendance" method="POST" enctype="multipart/form-data">
+      <label for="date">Select Date:</label>
+      <input type="date" id="date" name="date" required>
+
+      <label for="classImage">Upload Class Image:</label>
+      <input type="file" id="classImage" name="classImage" required>
+
+      <button type="submit" class="styled-btn small-btn">
+        <span></span><span></span><span></span><span></span>Submit Attendance
+      </button>
+    </form>
+    <a href="/dashboard" class="styled-btn dashboard-btn">
+      <span></span><span></span><span></span><span></span>Dashboard
+    </a>
+  </div>
+</body>
+</html>
